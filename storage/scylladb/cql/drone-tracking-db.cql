@@ -1,16 +1,3 @@
-# DoD Delta Attack Drone Tracking Service
-Go 1.23 Attack Drone Tracking Service using React.js and ScyllaDB NoSQL Drone Tracking DB
-
-
-# Drone Tracking Service Architecture
-
-IN-PROGRESS
-
-# Drone Tracking Service Database Schema Design
-
-IN-PROGRESS
-
-```cql
 -- Keyspace creation
 CREATE KEYSPACE IF NOT EXISTS drone_tracking
 WITH REPLICATION = {'class': 'SimpleStrategy', 'replication_factor': 3};
@@ -60,11 +47,3 @@ CREATE TABLE IF NOT EXISTS drone_tracking.drone_assignments (
     status TEXT,
     PRIMARY KEY (drone_id, assignment_id)
 ) WITH CLUSTERING ORDER BY (assignment_id DESC);
-
-```
-
-To apply the CQL schema apply as follows.
-
-```shell
-cqlsh -f drone-tracking-db.cql
-```
